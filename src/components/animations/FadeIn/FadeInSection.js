@@ -25,17 +25,21 @@ export default function FadeInSection(props) {
 const Wrapper = styled.div`
   .fade-in-section {
     background-color: ${props => props.bgColor};
-    opacity: 0;
-    transform: translateY(12vh);
-    visibility: hidden;
-    transition: opacity 1200ms ease-out, transform 800ms ease-out,
-      visibility 1200ms ease-out;
-    will-change: opacity, transform, visibility;
+    h1, h2, h3, h4, h5, h6, p, span {
+      opacity: 0;
+      transform: translateY(12vh);
+      visibility: hidden;
+      transition: opacity 1200ms ease-out, transform 800ms ease-out,
+        visibility 1200ms ease-out;
+      will-change: opacity, transform, visibility;
+    }
   }
   .fade-in-section.is-visible {
-    opacity: 1;
-    transform: none;
-    visibility: visible;
+    h1, h2, h3, h4, h5, h6, p, span {
+      opacity: 1;
+      transform: none;
+      visibility: visible;
+    }
   }
 
   /* Just for presentational purposes, please disregard in your own implementation */
